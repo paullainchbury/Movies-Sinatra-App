@@ -1,0 +1,16 @@
+Home page
+
+<form action="/get_movie_from_omdb" method="get">
+  <label for="movie_name">What movie do you wanna see?</label>
+  <input type="text" name="movie_name"></input>
+  <button>Get the movie</button>
+</form>
+
+<% if @movie_name %>
+  You searched for <%= @movie_name %>. Good choice cowboy, here's what we found:
+
+  <%= @movie %>
+
+
+  <% end %>
+  
